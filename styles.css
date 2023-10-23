@@ -1,0 +1,142 @@
+body {
+    background-color: #141414;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    overflow-y: scroll;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    height: calc(50vh - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1000;
+    background-color: black;
+    opacity: 0.9;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.prompt {
+    color: green;
+}
+
+.output {
+    color: white;
+}
+
+.command {
+    color: yellow;
+}
+
+.error {
+    color: red;
+}
+
+.suggestions {
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+}
+
+.suggestions button {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    border-radius: 20px;
+    border-color: black;
+    background-color: #333;
+    box-shadow: 0 0 15px grey;
+    padding: 10px 18px;
+    background: linear-gradient(to left top, rgb(121, 121, 121), black);
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+    animation: rotate-colors 5s linear infinite;
+}
+
+@keyframes rotate-colors {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: yellow;
+    }
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+.disclaimer {
+text-align: center;
+margin-top: 140px;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: shooting 2s linear infinite;
+}
+
+@keyframes shooting {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100vw, -100vh);
+        opacity: 0;
+    }
+}
+
+.twinkle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkling 2s infinite;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
